@@ -2,7 +2,11 @@ services:
   backend:
     build: .
     environment:
-      DB_HOST: "db"
+      DATABASE_HOST: "db"
+      DATABASE_PORT: 5432
+      DATABASE_USER: "sca"
+      DATABASE_PASSWORD: "sca"
+      DATABASE_NAME: "sca"
     env_file:
       - .env
     ports:

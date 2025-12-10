@@ -9,6 +9,7 @@ dependencies = [
     "djangorestframework>=3.16.1",
     "dotenv>=0.9.9",
     "drf-spectacular>=0.29.0",
+    "psycopg>=3.3.2",
     "requests>=2.32.5",
 ]
 
