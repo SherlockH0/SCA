@@ -20,7 +20,7 @@ docker compose up -d
 
 You can now access the project at [`http://localhost:8000`](http://localhost:8000)
 
-Swagger UI is available at [`http://localhost:8000/api/schema/swagger-ui/`](http://localhost:8000/api/schema/swagger-ui/)
+Swagger UI is available at [`http://localhost:8000/api/schema/swagger/`](http://localhost:8000/api/schema/swagger/)
 OpenAPI spec is available at [`http://localhost:8000/api/schema/`](http://localhost:8000/api/schema/)
 
 ## Postman collection
