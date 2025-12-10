@@ -5,16 +5,18 @@ WORKDIR /usr/src/app
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONPATH .
+ENV UV_NO_DEV=1
 
 RUN apt-get update \
-    && curl -LsSf https://astral.sh/uv/0.9.17/install.sh | sh \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
+COPY --from=ghcr.io/astral-sh/uv:0.9.17 /uv /uvx /bin/
 
 COPY uv.lock pyproject.toml ./
 COPY README.md Makefile ./
 
-RUN uv sync
+RUN uv sync --locked
 
 COPY src src
 COPY scripts scripts

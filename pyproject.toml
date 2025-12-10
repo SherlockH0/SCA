@@ -8,6 +8,8 @@ dependencies = [
     "django>=6.0",
     "djangorestframework>=3.16.1",
     "dotenv>=0.9.9",
+    "drf-spectacular>=0.29.0",
+    "requests>=2.32.5",
 ]
 
 [tool.basedpyright]
@@ -15,6 +17,7 @@ typeCheckingMode = "basic"
 
 [dependency-groups]
 def = [
+    "djangorestframework-types>=0.9.0",
     "ipython>=9.8.0",
 ]
 dev = [
